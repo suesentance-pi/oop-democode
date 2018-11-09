@@ -1,18 +1,33 @@
 package lecture3;
 
+import java.util.Arrays;
+
 public class ReferenceChasing {
 
+  private static void update(Link l) {
+    l.value = l.value.toUpperCase();
+  }
 
-    public static void main(String[] args) {
+  private static void update(String[] arr) {
+    arr[0] = arr[0].toUpperCase();
+  }
 
-        Link l1 = new Link("andy");
-        Link l2 = new Link("was");
-        Link l3 = new Link("here");
+  public static void main(String[] args) {
 
-        l1.next = l2;
-        l2.next = l3;
+    String[] ar = new String[] {"andy", "was", "here"};
+    update(ar);
+    System.out.println(Arrays.toString(ar));
 
-        System.out.println(l1);
+    Link l1 = new Link("andy");
+    Link l2 = new Link("was");
+    Link l3 = new Link("here");
 
-    }
+    l1.next = l2;
+    l2.next = l3;
+
+    update(l2);
+
+    System.out.println(l1);
+    System.out.println(l2);
+  }
 }

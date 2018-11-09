@@ -1,6 +1,6 @@
 package lecture3;
 
-class Link {
+class Link extends Object{
 
   String value;
   Link next;
