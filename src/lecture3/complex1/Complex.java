@@ -15,7 +15,7 @@ public class Complex {
   }
 
   public Complex mult(Complex a) {
-      return new Complex(re * a.re - im * a.im, re * a.im + a.re + im);
+      return new Complex(re * a.re - im * a.im, re * a.im + a.re * im);
   }
 
   public double re() {
